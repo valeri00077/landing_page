@@ -1,0 +1,222 @@
+
+:root {
+  
+  /* colors */
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  
+  /* names font */
+  --name-fnt-sz: 2rem;
+  --name-fnt: 'Permanent Marker', sans-serif;
+  
+  /* main fonts*/
+  --main-fnt: 'Andika', sans-serif;
+  --main-fnt-sz: 15rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-fnt);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--black);
+  background: url(img/christmas.jpg) no-repeat center center/ cover;
+  background-color: white;
+  transition: 0.5s;
+  /* background-size: 100%; */
+}
+
+.img {
+  position: fixed;
+  width: 100%;
+  height: 130vh;
+  transition: transform .5s;
+  transform: translateY(0%);
+  overflow: hidden;
+  z-index: 3;
+}
+
+.imgsanta {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.black {
+  opacity: 0.9;
+}
+
+.container {
+  /* border: 2px solid black; */
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.menu {
+  /* border: 2px solid black; */
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  font-size: 2rem;
+  z-index: 3;
+}
+
+.first {
+  /* border: 2px solid red; */
+  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: green;
+}
+
+.second {
+  /* border: 2px solid red; */
+  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+  cursor: pointer;
+  color: red;
+}
+
+.third {
+  /* border: 2px solid red; */
+  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  /* margin-left: 1em; */
+  cursor: pointer;
+  color: blue;
+}
+
+.hide, .hide1, .hide2 {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+p {
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* .hide {
+  transform: translateY(100%);
+} */
+
+.hd, .hd1, .hd2 {
+  transform: translateY(100%);
+}
+
+.visible {
+  transform: translateY(0%);
+
+}
+
+/* mouse ball */
+
+.ball {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background-color: black;
+  transition-duration: 0.1s ;
+  /* transition: 0.09s ease-out ; */
+  transition-timing-function: cubic-bezier(0, 0, 0.05, 0.05);
+  visibility: hidden;
+}
+
+.hover {
+  background-color: transparent;
+  border: 1px solid rgb(253, 51, 0);
+  box-shadow: 0px 0px 5px 0px rgb(253, 51, 0);
+  width: 50px;
+  height: 50px;
+  font-size: 3rem;
+  position: fixed;
+  top: 100px;
+}
+
+/* .hover1 {
+  background-color: transparent;
+  border: 1px solid rgb(219, 44, 0);
+  box-shadow: 0px 0px 5px 0px rgb(219, 44, 0);
+  width: 50px;
+  height: 50px;
+  font-size: 3rem;
+  position: fixed;
+  top: 100px;
+} */
+
+
+
+.load {
+  visibility: visible;
+  
+}
+
+/* dark them */
+
+.bodydark {
+  background-color: black;
+  background: url(img/blackchristmas.jpg) no-repeat center center/ cover;
+}
+
+.dark {
+  border: 1px solid black;
+  border-radius: 30px;
+  width: 60px;
+  height: 30px;
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  transition: 0.5s linear;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 15px 0px rgba(1 1 1 / 50%);
+  cursor: pointer;
+}
+
+.darkthem {
+  border: 1px solid white;
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.5);
+}
+
+.floatball {
+  /* border: 1px solid green; */
+  background-color: black;
+  box-shadow: 0px 0px 5px 0px rgba(1 1 1 / 50%);
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+  /* display: none; */
+
+}
+
+.floatballRight {
+  /* position: absolute; */
+  /* left: 100%; */
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
+  left: 100%;
+  transform: translateX(-26px);
+  /* transition: 1s; */
+}
